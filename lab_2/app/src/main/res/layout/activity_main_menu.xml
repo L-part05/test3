@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f5f7fa"
+    android:gravity="center"
+    android:padding="24dp"
+    tools:context=".MainMenuActivity">
+
+    <!-- 应用标题 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="布局演示应用"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginBottom="48dp" />
+
+    <!-- 线性布局按钮，跳转到线性布局页面 -->
+    <Button
+        android:id="@+id/btn_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开线性布局页面"
+        android:textSize="18sp"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#FFFFFF"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 表格布局按钮，跳转到表格布局页面 -->
+    <Button
+        android:id="@+id/btn_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开表格布局页面"
+        android:textSize="18sp"
+        android:backgroundTint="#2196F3"
+        android:textColor="#FFFFFF"
+        android:padding="16dp" />
+    <!-- 约束布局1按钮，跳转到约束布局1(计算器)页面 -->
+    <Button
+        android:id="@+id/btn_calculator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开计算器页面"
+        android:textSize="18sp"
+        android:backgroundTint="#9C27B0"
+        android:textColor="#FFFFFF"
+        android:padding="16dp"
+        android:layout_marginTop="16dp" />
+    <!-- 约束布局1按钮，跳转到约束布局2(太空主题)页面 -->
+    <Button
+        android:id="@+id/btn_space"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="太空主题页面"
+        android:textSize="18sp"
+        android:backgroundTint="#9C4DFF"
+        android:textColor="#FFFFFF"
+        android:padding="16dp"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

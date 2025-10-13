@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="16dp"
+    tools:context=".CalculatorActivity">
+
+    <!-- 标题 -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ConstraintLayoutTest"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:gravity="center"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 输入显示区域 -->
+    <TextView
+        android:id="@+id/inputLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Input"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <!-- 显示结果的TextView -->
+    <TextView
+        android:id="@+id/resultDisplay"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:text="0.0"
+        android:textSize="32sp"
+        android:textColor="#333333"
+        android:gravity="end|center_vertical"
+        android:background="@drawable/display_background"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputLabel" />
+
+    <!-- 第一行按钮：7, 8, 9, + -->
+    <Button
+        android:id="@+id/btn7"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="7"
+        android:textSize="20sp"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#333333"
+        app:layout_constraintEnd_toStartOf="@+id/btn8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultDisplay"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+        android:id="@+id/btn8"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="8"
+        android:textSize="20sp"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#333333"
+        app:layout_constraintEnd_toStartOf="@+id/btn9"
+        app:layout_constraintStart_toEndOf="@+id/btn7"
+        app:layout_constraintTop_toTopOf="@+id/btn7"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+        android:id="@+id/btn9"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="9"
+        android:textSize="20sp"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#333333"
+        app:layout_constraintEnd_toStartOf="@+id/btnPlus1"
+        app:layout_constraintStart_toEndOf="@+id/btn8"
+        app:layout_constraintTop_toTopOf="@+id/btn7"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+        android:id="@+id/btnPlus1"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="+"
+        android:textSize="20sp"
+        android:backgroundTint="#FF9800"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn9"
+        app:layout_constraintTop_toTopOf="@+id/btn7" />
+
+    <!-- 第二行按钮：4, 5, 6, × -->
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="4"
+        android:textSize="20sp"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#333333"
+        app:layout_constraintEnd_toStartOf="@+id/btn5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn7"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+        android:id="@+id/btn5"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="5"
+        android:textSize="20sp"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#333333"
+        app:layout_constraintEnd_toStartOf="@+id/btn6"
+        app:layout_constraintStart_toEndOf="@+id/btn4"
+        app:layout_constraintTop_toTopOf="@+id/btn4"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+        android:id="@+id/btn6"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="6"
+        android:textSize="20sp"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#333333"
+        app:layout_constraintEnd_toStartOf="@+id/btnMultiply"
+        app:layout_constraintStart_toEndOf="@+id/btn5"
+        app:layout_constraintTop_toTopOf="@+id/btn4"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+        android:id="@+id/btnMultiply"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="×"
+        android:textSize="20sp"
+        android:backgroundTint="#FF9800"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn6"
+        app:layout_constraintTop_toTopOf="@+id/btn4" />
+
+    <!-- 第三行按钮：1, 2, 3, + -->
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="1"
+        android:textSize="20sp"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#333333"
+        app:layout_constraintEnd_toStartOf="@+id/btn2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn4"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="2"
+        android:textSize="20sp"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#333333"
+        app:layout_constraintEnd_toStartOf="@+id/btn3"
+        app:layout_constraintStart_toEndOf="@+id/btn1"
+        app:layout_constraintTop_toTopOf="@+id/btn1"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="3"
+        android:textSize="20sp"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#333333"
+        app:layout_constraintEnd_toStartOf="@+id/btnPlus2"
+        app:layout_constraintStart_toEndOf="@+id/btn2"
+        app:layout_constraintTop_toTopOf="@+id/btn1"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+        android:id="@+id/btnPlus2"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="+"
+        android:textSize="20sp"
+        android:backgroundTint="#FF9800"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn3"
+        app:layout_constraintTop_toTopOf="@+id/btn1" />
+
+    <!-- 第四行按钮：0, -, - -->
+    <Button
+        android:id="@+id/btn0"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="0"
+        android:textSize="20sp"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#333333"
+        app:layout_constraintEnd_toStartOf="@+id/btnMinus1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn1"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+        android:id="@+id/btnMinus1"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="-"
+        android:textSize="20sp"
+        android:backgroundTint="#FF9800"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/btnMinus2"
+        app:layout_constraintStart_toEndOf="@+id/btn0"
+        app:layout_constraintTop_toTopOf="@+id/btn0"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+        android:id="@+id/btnMinus2"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="-"
+        android:textSize="20sp"
+        android:backgroundTint="#FF9800"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnMinus1"
+        app:layout_constraintTop_toTopOf="@+id/btn0" />
+
+    <!-- 返回按钮 -->
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回主菜单"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
