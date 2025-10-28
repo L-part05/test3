@@ -1158,29 +1158,43 @@ public class ContextMenuActivity extends AppCompatActivity {
 AndroidManifest.xml配置：
 
 xml
-<application
-    android:allowBackup="true"
-    android:dataExtractionRules="@xml/data_extraction_rules"
-    android:fullBackupContent="@xml/backup_rules"
-    android:icon="@mipmap/ic_launcher"
-    android:label="@string/app_name"
-    android:roundIcon="@mipmap/ic_launcher_round"
-    android:supportsRtl="true"
-    android:theme="@style/Theme.Test03">
-    
-    <activity
-        android:name=".MainActivity"
-        android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
-    
-    <activity android:name=".ListActivity" android:exported="false" />
-    <activity android:name=".LoginActivity" android:exported="false" />
-    <activity android:name=".MenuTestActivity" android:exported="false" />
-    <activity android:name=".ContextMenuActivity" android:exported="false" />
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Test03">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MenuTestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ContextMenuActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>
 </application>
 2. 数据适配技术
 SimpleAdapter：用于复杂数据结构的列表绑定
@@ -1244,5 +1258,6 @@ UI线程优化：学习在UI线程中处理复杂操作的最佳实践
 
 兼容性处理：了解不同Android版本的适配策略
 
+代码原址:https://github.com/L-part05/test3
 
 
